@@ -3,7 +3,7 @@ CREATE OR REPLACE VIEW
 SELECT
 	CONCAT(con.continent_name,': ', con.continent_code) AS "Continent Details",
 	CONCAT_WS(' - ',coun.country_name, coun.capital, coun.area_in_sq_km, 'km2') AS "Country Information",
-	CONCAT(curr.description, ' (',curr.currency_code,')') AS "Currencies"
+	CONCAT(curr.description, ' (', curr.currency_code, ')') AS "Currencies"
 FROM 
 	continents AS con,
 	countries AS coun,
