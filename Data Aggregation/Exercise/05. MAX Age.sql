@@ -1,4 +1,4 @@
 SELECT
-	MIN(deposit_charge)
+	MAX(age)
 FROM
 	wizard_deposits
