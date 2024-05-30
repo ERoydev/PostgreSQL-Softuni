@@ -1,0 +1,2 @@
+CREATE INDEX first_name_employees_idx
+ON employees(first_name)
