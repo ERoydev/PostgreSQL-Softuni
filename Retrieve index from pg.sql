@@ -1,3 +1,5 @@
+-- Meta data for my database
+
 SELECT
 	tablename,
 	indexname,
