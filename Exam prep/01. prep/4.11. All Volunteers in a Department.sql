@@ -4,15 +4,15 @@ $$
 	DECLARE
 		volunteer_count INT;
 	BEGIN
-		volunteer_count := (SELECT 
-								COUNT(*)
-							FROM
-								volunteers AS v
-								JOIN volunteers_departments AS vd
-								ON v.department_id = vd.id
-							
-							WHERE department_name = searched_volunteers_department
-							);
+		SELECT 
+			COUNT(*)
+		FROM
+			volunteers AS v
+			JOIN volunteers_departments AS vd
+			ON v.department_id = vd.id
+		
+		WHERE department_name = searched_volunteers_department INTO volunteer_count
+
 
 		RETURN volunteer_count;
 	END
